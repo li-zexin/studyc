@@ -49,12 +49,14 @@ void case3() {
 	printfCharArray(__FUNCTION__, str, length);
 }
 
-/**
- * 双引号引用的字符串
- * 同上
- */
 void case4() {
 	char str[4] = { 'a', '\0', 'b', '\0' };
+	int length = sizeof(str) / sizeof(str[0]);
+	printfCharArray(__FUNCTION__, str, length);
+}
+
+void case5() {
+	char str[4] = { 'a', NULL, 'b', NULL };
 	int length = sizeof(str) / sizeof(str[0]);
 	printfCharArray(__FUNCTION__, str, length);
 }
@@ -66,4 +68,5 @@ void testString() {
 	case2();
 	case3();
 	case4();
+	case5();
 }
