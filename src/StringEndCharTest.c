@@ -62,7 +62,7 @@ void case5() {
 }
 
 void testString() {
-	printf("=======>>>%s<<<=======\n", __FILE__);
+	printf("=======>>>%s<<<========\n", __FILE__);
 	printf("用例编号\t数组长度\t字符串\t\t\t数组\n", __FILE__);
 	case1();
 	case2();
