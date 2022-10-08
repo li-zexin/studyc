@@ -21,8 +21,9 @@ void test(){
 }
 
 void testString();
+void test_atoi();
 int main(void) {
 	puts("!!!Hello World!!!"); /* prints !!!Hello World!!! */
-	testString();
+	test_atoi();
 	return EXIT_SUCCESS;
 }
