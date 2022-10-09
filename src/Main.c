@@ -11,7 +11,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void test(){
+void ___test(){
 	printf("test \r ======>>>");
 	// test \r
 	for(int i = 0; i < 3; i++){
@@ -21,9 +21,13 @@ void test(){
 }
 
 void testString();
-void test_atoi();
+
+void test();
+
 int main(void) {
 	puts("!!!Hello World!!!"); /* prints !!!Hello World!!! */
-	test_atoi();
+//	testString();
+	test();
+
 	return EXIT_SUCCESS;
 }
