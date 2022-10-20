@@ -43,7 +43,7 @@ struct CharList test3_getnum() {
 	while ((temp = getchar()) != '\n') {
 		charList.arr[charList.len++] = temp;
 	}
-	charList.arr[charList.len++] = '\0';
+	charList.arr[charList.len] = '\0';
 
 	return charList;
 }

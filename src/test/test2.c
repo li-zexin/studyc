@@ -1,10 +1,3 @@
-/*
- * test2.c
- *
- *  Created on: 2022年10月8日
- *      Author: zexin.li
- */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -42,10 +35,10 @@ void test2_main() {
 	printf("求解一元二次方程ax²+bx+c=0的解 \n请输入a、b、c的值(逗号分割):");
 	fflush(stdout);
 
-	int a, b, c;
-	scanf("%d,%d,%d", &a, &b, &c);
+	float a, b, c;
+	scanf("%f,%f,%f", &a, &b, &c);
 
-	int derta = b * b - 4 * a * c;
+	float derta = b * b - 4 * a * c;
 	if (derta > 0) {
 		int dertasqrt = sqrt(derta);
 		float x1 = (-b + dertasqrt) / (2 * a);
