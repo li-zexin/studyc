@@ -7,11 +7,12 @@
  */
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 /**
  * 定义变长数组
  */
-struct CharList {
+struct Str {
 	int len;
 	char arr[];
 };
@@ -19,7 +20,7 @@ struct CharList {
 /**
  * 计算字符ASCII
  */
-int test3_compute(char *str) {
+int compute(char *str) {
 	int result = 0;
 	int len = strlen(str);
 	for (int i = 0; i < len; i++) {
@@ -34,27 +35,27 @@ int test3_compute(char *str) {
 /**
  * 读取键盘输入的字符
  */
-struct CharList test3_getnum() {
+struct Str getstr() {
+	struct Str str;
+	str.len = 0;
 
-	struct CharList charList;
-	charList.len = 0;
-
-	char temp;
-	while ((temp = getchar()) != '\n') {
-		charList.arr[charList.len++] = temp;
+	char c;
+	while ((c = getchar()) != '\n') {
+		str.arr[str.len++] = c;
 	}
-	charList.arr[charList.len] = '\0';
+	str.arr[str.len] = '\0';
 
-	return charList;
+	return str;
 }
 
-void test3_main() {
-	printf("请输入您的手机号码:");
+int main() {
+	printf("请输入手机号:");
 	fflush(stdout);
 
-	struct CharList charList = test3_getnum();
-	printf("您的手机号是:%s\n", charList.arr);
+	struct Str str = getstr();
+	printf("您的手机号是:%s\n", str.arr);
 
-	int result = test3_compute(charList.arr);
+	int result = compute(str.arr);
 	printf("各字符ASCII码值的和为:%d\n", result);
+	return EXIT_SUCCESS;
 }

@@ -31,8 +31,9 @@
 /**
  * 求解一元二次方程ax²+bx+c=0的解。其中a、b、c在键盘输入。根据根的情况，分别显示有“两个根分别是”、“一个根是”或者“无解”。
  */
-void test2_main() {
-	printf("求解一元二次方程ax²+bx+c=0的解 \n请输入a、b、c的值(逗号分割):");
+int main() {
+	printf("求解一元二次方程ax²+bx+c=0的解\n");
+	printf("请输入a,b,c的值(逗号分割):");
 	fflush(stdout);
 
 	float a, b, c;
@@ -50,5 +51,7 @@ void test2_main() {
 	} else {
 		printf("无解\n");
 	}
+
+	return EXIT_SUCCESS;
 }
 

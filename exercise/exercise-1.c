@@ -9,14 +9,14 @@ struct Str {
 /**
  * 使用键盘输入手机号, 将该号码分成两两一组的整数, 输出该整数对应的ASCII字符
  */
-void test1_main() {
+int main() {
 	printf("请输入手机号:");
 	fflush(stdout);
 
 	// 读取字符并打印. 如果是换行, 说明后续没有字符了, 直接退出; 否则继续执行
-	char c;
 	struct Str str;
 	str.length = 0;
+	char c;
 	while ((c = getchar()) != '\n') {
 		str.arr[str.length++] = c;
 	}
@@ -36,4 +36,5 @@ void test1_main() {
 		printf("整数%d对应的ASCII字符是:[%c]\n", num, num);
 	}
 
+	return EXIT_SUCCESS;
 }
